@@ -12,7 +12,6 @@ var { taskbar, desktop, pinned, recent } = {
   desktop: (localStorage.getItem("desktop") &&
     JSON.parse(localStorage.getItem("desktop"))) || [
     "此电脑",
-    "Unescape",
     "回收站",
     "文件资源管理器",
     "Store",
@@ -28,7 +27,6 @@ var { taskbar, desktop, pinned, recent } = {
     "邮件",
     "设置",
     "Store",
-    "Unescape",
     "记事本",
     "Whiteboard",
     "计算器",
