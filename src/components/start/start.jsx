@@ -262,7 +262,7 @@ export const StartMenu = () => {
           <div className="menuBar">
             <div className="profile handcr">
               <Icon
-                src="blueProf"
+                src="newProf"
                 ui
                 rounded
                 width={26}
