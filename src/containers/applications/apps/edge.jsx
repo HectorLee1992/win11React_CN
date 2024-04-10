@@ -11,12 +11,9 @@ export const EdgeMenu = () => {
   const dispatch = useDispatch();
 
   const iframes = {
-    "https://cn.bing.com/": "必应",
-    "https://blueedge.me": "blueedge",
-    "https://www.iamdt.cn/": "冬天的小窝",
-    "https://github.com/inwinter04": "Github",
-    "https://blueedge.me/unescape": "Unescape",
-    "https://win11.iamdt.eu.org/": "Windows11",
+    "https://www.google.com/webhp?igu=1": "Google",
+    "https://bing.com": "Bing",
+    "https://www.youtube.com/embed/m0EHSoZzHEA": "Youtube"
   };
 
   const favicons = {
