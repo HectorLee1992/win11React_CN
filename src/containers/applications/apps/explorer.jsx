@@ -182,7 +182,7 @@ export const Explorer = () => {
         app={wnapp.action}
         icon={wnapp.icon}
         size={wnapp.size}
-        name="文件资源管理器"
+        name="檔案總管"
       />
       <div className="windowScreen flex flex-col">
         <Ribbon />
@@ -230,7 +230,7 @@ export const Explorer = () => {
                 type="text"
                 onChange={handleSearchChange}
                 value={searchtxt}
-                placeholder="搜索"
+                placeholder="搜尋 常用"
               />
             </div>
           </div>
@@ -239,7 +239,7 @@ export const Explorer = () => {
             <ContentArea searchtxt={searchtxt} />
           </div>
           <div className="sec3">
-            <div className="item-count text-xs">{fdata.data.length} 个项目</div>
+            <div className="item-count text-xs">{fdata.data.length} 個項目</div>
             <div className="view-opts flex">
               <Icon
                 className="viewicon hvtheme p-1"
@@ -334,35 +334,34 @@ const NavPane = ({}) => {
   return (
     <div className="navpane win11Scroll">
       <div className="extcont">
-        <Dropdown icon="star" title="快速访问" action="" isDropped>
+        <Dropdown icon="star" title="我的最愛" action="" isDropped>
           <Dropdown
             icon="down"
-            title="下载"
+            title="下載"
             spid="%downloads%"
             notoggle
             pinned
           />
-          <Dropdown icon="user" title="此电脑" spid="%user%" notoggle pinned />
+          <Dropdown icon="user" title="本機" spid="%user%" notoggle pinned />
           <Dropdown
             icon="docs"
-            title="文档"
+            title="文件"
             spid="%documents%"
             notoggle
             pinned
           />
-          <Dropdown title="Github" spid="%github%" notoggle />
-          <Dropdown icon="pics" title="图片" spid="%pictures%" notoggle />
+          <Dropdown icon="pics" title="圖片" spid="%pictures%" notoggle />
         </Dropdown>
         <Dropdown icon="onedrive" title="OneDrive" spid="%onedrive%" />
-        <Dropdown icon="thispc" title="此电脑" action="" isDropped>
+        <Dropdown icon="thispc" title="本機" action="" isDropped>
           <Dropdown icon="desk" title="桌面" spid="%desktop%" />
-          <Dropdown icon="docs" title="文档" spid="%documents%" />
-          <Dropdown icon="down" title="下载" spid="%downloads%" />
-          <Dropdown icon="music" title="音乐" spid="%music%" />
-          <Dropdown icon="pics" title="图片" spid="%pictures%" />
-          <Dropdown icon="vid" title="视频" spid="%videos%" />
-          <Dropdown icon="disc" title="系统 (C:)" spid="%cdrive%" />
-          <Dropdown icon="disk" title="软件 (D:)" spid="%ddrive%" />
+          <Dropdown icon="docs" title="文件" spid="%documents%" />
+          <Dropdown icon="down" title="下載" spid="%downloads%" />
+          <Dropdown icon="music" title="音樂" spid="%music%" />
+          <Dropdown icon="pics" title="圖片" spid="%pictures%" />
+          <Dropdown icon="vid" title="影片" spid="%videos%" />
+          <Dropdown icon="disc" title="系統 (C:)" spid="%cdrive%" />
+          <Dropdown icon="disk" title="軟體 (D:)" spid="%ddrive%" />
         </Dropdown>
       </div>
     </div>
@@ -375,7 +374,7 @@ const Ribbon = ({}) => {
       <div className="ribsec">
         <div className="drdwcont flex">
           <Icon src="new" ui width={18} margin="0 6px" />
-          <span>新建</span>
+          <span>新增</span>
         </div>
       </div>
       <div className="ribsec">
@@ -392,7 +391,7 @@ const Ribbon = ({}) => {
         </div>
         <div className="drdwcont flex">
           <Icon src="view" ui width={18} margin="0 6px" />
-          <span>查看</span>
+          <span>檢視</span>
         </div>
       </div>
     </div>
