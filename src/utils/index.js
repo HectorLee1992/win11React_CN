@@ -29,7 +29,6 @@ var { taskbar, desktop, pinned, recent } = {
     "设置",
     "Store",
     "Unescape",
-    "Buy me a coffee",
     "记事本",
     "Whiteboard",
     "计算器",
