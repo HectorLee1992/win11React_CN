@@ -9,7 +9,7 @@ import dirs from "./assets/dir.json";
 export const WnTerminal = () => {
   const wnapp = useSelector((state) => state.apps.terminal);
   const [stack, setStack] = useState(["Microsoft Windows [版本 10.0.22000.51]", ""]);
-  const [pwd, setPwd] = useState("C:\\Users\\Blue");
+  const [pwd, setPwd] = useState("C:\\Users\\arclight");
   const [lastCmd, setLsc] = useState(0);
   const [wntitle, setWntitle] = useState("命令提示符");
 
