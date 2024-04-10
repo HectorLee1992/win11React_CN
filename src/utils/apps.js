@@ -250,18 +250,11 @@ const apps = [
     type: "app",
   },
   {
-    name: "Github",
+    name: "原著Github",
     icon: "github",
     type: "app",
     action: "EXTERNAL",
     payload: "https://github.com/inwinter04/win11React_CN",
-  },
-  {
-    name: "Unescape",
-    icon: "unescape",
-    type: "action",
-    action: "EXTERNAL",
-    payload: "https://blueedge.me/unescape",
   },
 ];
 
