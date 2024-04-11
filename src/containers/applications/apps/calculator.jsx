@@ -151,7 +151,7 @@ export const Calculator = () => {
         app={wnapp.action}
         icon={wnapp.icon}
         size={wnapp.size}
-        name="计算器"
+        name="小算盤"
       />
       <div className="windowScreen flex flex-col" data-dock="true">
         <div className="flex pt-2">
