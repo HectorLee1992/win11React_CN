@@ -23,22 +23,22 @@ const defState = {
   menus: {
     desk: [
       {
-        name: "查看",
+        name: "檢視(V)",
         icon: "view",
         type: "svg",
         opts: [
           {
-            name: "大图标",
+            name: "大圖示(R)",
             action: "changeIconSize",
             payload: "large",
           },
           {
-            name: "中等图标",
+            name: "中圖示(R)",
             action: "changeIconSize",
             payload: "medium",
           },
           {
-            name: "小图标",
+            name: "小圖示(N)",
             action: "changeIconSize",
             payload: "small",
             dot: true,
@@ -47,19 +47,19 @@ const defState = {
             type: "hr",
           },
           {
-            name: "显示桌面图标",
+            name: "顯示桌面圖示",
             action: "deskHide",
             check: true,
           },
         ],
       },
       {
-        name: "排列方式",
+        name: "排序方式(O)",
         icon: "sort",
         type: "svg",
         opts: [
           {
-            name: "名称",
+            name: "名稱",
             action: "changeSort",
             payload: "name",
           },
@@ -76,7 +76,7 @@ const defState = {
         ],
       },
       {
-        name: "刷新",
+        name: "重新整理(E)",
         action: "refresh",
         type: "svg",
         icon: "refresh",
@@ -85,21 +85,21 @@ const defState = {
         type: "hr",
       },
       {
-        name: "新建",
+        name: "新增(W)",
         icon: "New",
         type: "svg",
         opts: [
           {
-            name: "文件夹",
+            name: "資料夾",
           },
           {
-            name: "快捷方式",
+            name: "捷徑",
           },
           {
-            name: "文本文档",
+            name: "文字文件",
           },
           {
-            name: "ZIP 压缩文件",
+            name: "WinRAR ZIP 壓縮檔",
           },
         ],
       },
@@ -107,14 +107,14 @@ const defState = {
         type: "hr",
       },
       {
-        name: "显示设置",
+        name: "顯示設定(D)",
         icon: "display",
         type: "svg",
         action: "SETTINGS",
         payload: "full",
       },
       {
-        name: "个性化",
+        name: "個人化(R)",
         icon: "personalize",
         type: "svg",
         action: "SETTINGS",
@@ -124,17 +124,17 @@ const defState = {
         type: "hr",
       },
       {
-        name: "下一个桌面背景",
+        name: "替換桌面背景",
         action: "WALLNEXT",
       },
       {
-        name: "在终端中打开",
+        name: "在終端中開啟(T)",
         icon: "terminal",
         action: "OPENTERM",
         payload: "C:\\Users\\Blue\\Desktop",
       },
       {
-        name: "关于",
+        name: "關於",
         action: "DESKABOUT",
         icon: "win/info",
         payload: true,
@@ -142,7 +142,7 @@ const defState = {
     ],
     task: [
       {
-        name: "排列图标",
+        name: "排序圖標",
         opts: [
           {
             name: "居左",
@@ -161,30 +161,30 @@ const defState = {
         type: "hr",
       },
       {
-        name: "搜索",
+        name: "搜尋",
         opts: [
           {
-            name: "显示",
+            name: "顯示",
             action: "TASKSRCH",
             payload: true,
           },
           {
-            name: "隐藏",
+            name: "隱藏",
             action: "TASKSRCH",
             payload: false,
           },
         ],
       },
       {
-        name: "小部件",
+        name: "開始",
         opts: [
           {
-            name: "显示",
+            name: "顯示",
             action: "TASKWIDG",
             payload: true,
           },
           {
-            name: "隐藏",
+            name: "隱藏",
             action: "TASKWIDG",
             payload: false,
           },
@@ -194,52 +194,52 @@ const defState = {
         type: "hr",
       },
       {
-        name: "显示桌面",
+        name: "顯示桌面",
         action: "SHOWDSK",
       },
     ],
     app: [
       {
-        name: "打开",
+        name: "開啟",
         action: "performApp",
         payload: "open",
       },
       {
-        name: "以管理员身份运行",
+        name: "以系統管理員身分執行(A)",
         action: "performApp",
         payload: "open",
         icon: "win/shield",
       },
       {
-        name: "打开文件所在的位置",
+        name: "開啟檔案所在位置",
         dsb: true,
       },
       {
-        name: "从开始菜单取消固定",
+        name: "釘選到開始畫面",
         dsb: true,
       },
       {
-        name: "压缩为 ZIP 文件",
+        name: "壓縮成zip檔",
         dsb: true,
       },
       {
-        name: "复制文件地址",
+        name: "複製到檔案位置",
         dsb: true,
       },
       {
-        name: "属性",
+        name: "內容",
         dsb: true,
       },
       {
         type: "hr",
       },
       {
-        name: "删除快捷方式",
+        name: "刪除捷徑",
         action: "performApp",
         payload: "delshort",
       },
       {
-        name: "删除",
+        name: "刪除",
         action: "delApp",
         payload: "delete",
       },
