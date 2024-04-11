@@ -60,7 +60,7 @@ export const Settings = () => {
         app={wnapp.action}
         icon={wnapp.icon}
         size={wnapp.size}
-        name="设置"
+        name="設定"
       />
       <div className="windowScreen flex flex-col" data-dock="true">
         <div className="restWindow flex-grow flex flex-col">
@@ -75,13 +75,13 @@ export const Settings = () => {
                 />
                 <div>
                   <p>{userName}</p>
-                  <p>本地用户</p>
+                  <p>帳戶</p>
                 </div>
               </div>
               <input
                 type="text"
                 className="search"
-                placeholder="查找设置 "
+                placeholder="查詢設定 "
                 name="search"
               />
             </div>
@@ -130,7 +130,7 @@ export const Settings = () => {
                                 <div className="column_device">
                                   <p className="device_name">Dell</p>
                                   <p className="device_model">Precision 3640 Tower</p>
-                                  <p className="device_rename">重命名</p>
+                                  <p className="device_rename">重新命名</p>
                                 </div>
                               </div>
                               <div className="right">
@@ -144,7 +144,7 @@ export const Settings = () => {
                                     Microsoft 365
                                     <br />
                                     <span className="column_lower">
-                                      浏览优势
+                                      瀏覽優勢
                                     </span>
                                   </p>
                                 </div>
@@ -179,22 +179,22 @@ export const Settings = () => {
                                 />
                                 <div>
                                   <h2 className="font-medium text-lg">WiFi</h2>
-                                  <p>已连接</p>
+                                  <p>已連接</p>
                                 </div>
                               </div>
                               <div className="box">
                                 <span className="settingsIcon"></span>
                                 <div>
-                                  <h3>属性</h3>
-                                  <p>专用网络</p>
+                                  <h3>內容</h3>
+                                  <p>專用網路</p>
                                 </div>
                               </div>
                               <div className="box">
                                 <span className="settingsIcon"></span>
                                 <div>
-                                  <h3>数据使用量</h3>
+                                  <h3>網路使用量</h3>
                                   <p>
-                                    {Math.round(Math.random() * 100)}GB, 过去30天
+                                    {Math.round(Math.random() * 100)}GB, 過去30天
                                   </p>
                                 </div>
                               </div>
@@ -209,7 +209,7 @@ export const Settings = () => {
                                 alt=""
                               />
                               <div>
-                                <h3>选择要应用的主题</h3>
+                                <h3>選擇要應用的主題</h3>
                                 <div className="bgBox">
                                   {wall.themes.map((e, i) => {
                                     return (
@@ -240,7 +240,7 @@ export const Settings = () => {
                               />
                               <div>
                                 <p>{userName.toUpperCase()}</p>
-                                <p>本地用户</p>
+                                <p>帳戶</p>
                                 <p>Administrator</p>
                               </div>
                             </div>
@@ -262,9 +262,9 @@ export const Settings = () => {
                             <div key={i} className="tile langSwitcherTile">
                               <span className="settingsIcon"></span>
                               <div className="tile_content">
-                                <p>Windows 显示语言</p>
+                                <p>Windows 顯示語言</p>
                                 <p className="tile_desc">
-                                Windows的设置和文件资源管理器等功能将以这种语言出现
+                                Windows的設置和文件資源管理器等功能將以這種語言出現
                                 </p>
                               </div>
                               <LangSwitch />
@@ -281,7 +281,7 @@ export const Settings = () => {
                                 />
                                 <div>
                                   <h2>你使用的是最新版本</h2>
-                                  <p>上次检查时间: 今天</p>
+                                  <p>上次檢查時間: 今天</p>
                                 </div>
                               </div>
                               <div className="right">
@@ -296,8 +296,8 @@ export const Settings = () => {
                                   }}
                                 >
                                   {updating
-                                    ? "检查更新..."
-                                    : "检查更新"}
+                                    ? "檢查更新..."
+                                    : "檢查更新"}
                                 </div>
                               </div>
                             </div>
@@ -352,10 +352,10 @@ export const Settings = () => {
                   }}
                   className="text-2xl font-semibold"
                 >
-                  需要重新启动
+                  需要重新啟動
                 </h1>
                 <p>
-                有些更改直到重新启动设备才会生效。
+                有些更改直到重新啟動設備才會生效。
                 </p>
 
                 <div
@@ -378,7 +378,7 @@ export const Settings = () => {
                     }}
                     className="flex-1 rounded border-none hover:opacity-95"
                   >
-                    现在重启
+                    現在重啟
                   </button>
                   <button
                     style={{
@@ -390,7 +390,7 @@ export const Settings = () => {
                       setUpmodalOpen(false);
                     }}
                   >
-                    稍后重启
+                    稍後重啟
                   </button>
                 </div>
               </div>
