@@ -15,17 +15,17 @@ apps.map((e) => {
 export const Taskmanager = () => {
   const wnapp = useSelector((state) => state.apps.taskmanager);
 
-  const [tab, setTab] = useState("进程");
+  const [tab, setTab] = useState("處理程序");
   const [nav, setNav] = useState("open");
 
   const tabNames = [
-    { title: "进程", icon: "faTableCellsLarge" },
-    { title: "性能", icon: "faWaveSquare" },
-    { title: "应用历史记录", icon: "faClockRotateLeft" },
-    { title: "启动", icon: "faGaugeHigh" },
-    { title: "用户", icon: "faUser" },
-    { title: "详细信息", icon: "faList" },
-    { title: "服务", icon: "faPuzzlePiece" },
+    { title: "處理程序", icon: "faTableCellsLarge" },
+    { title: "效能", icon: "faWaveSquare" },
+    { title: "應用程式歷程記錄", icon: "faClockRotateLeft" },
+    { title: "開機", icon: "faGaugeHigh" },
+    { title: "使用者", icon: "faUser" },
+    { title: "詳細資料", icon: "faList" },
+    { title: "服務", icon: "faPuzzlePiece" },
   ];
 
   const powerUsage = ["非常低", "低", "中", "高", "非常高"];
@@ -46,7 +46,7 @@ export const Taskmanager = () => {
         app={wnapp.action}
         icon={wnapp.icon}
         size={wnapp.size}
-        name="任务管理器"
+        name="工作管理員"
       />
       <div className="windowScreen flex flex-col" data-dock="true">
         <div className="restWindow flex-grow flex flex-col">
@@ -69,19 +69,19 @@ export const Taskmanager = () => {
             <h3>{tab}</h3>
             {(() => {
               switch (tab) {
-                case "进程":
+                case "處理程序":
                   return (
-                    <div className="进程">
+                    <div className="處理程序">
                       <table>
                         <thead>
                           <tr>
-                            <th>名称</th>
+                            <th>名稱</th>
                             <th>CPU</th>
-                            <th>内存</th>
-                            <th>磁盘</th>
-                            <th>网络</th>
+                            <th>記憶體</th>
+                            <th>磁碟</th>
+                            <th>網路</th>
                             <th>GPU</th>
-                            <th>电源使用情况</th>
+                            <th>電源用量</th>
                           </tr>
                         </thead>
                         <tbody>
