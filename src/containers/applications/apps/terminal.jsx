@@ -11,7 +11,7 @@ export const WnTerminal = () => {
   const [stack, setStack] = useState(["Microsoft Windows [版本 10.0.22000.51]", ""]);
   const [pwd, setPwd] = useState("C:\\Users\\arclight");
   const [lastCmd, setLsc] = useState(0);
-  const [wntitle, setWntitle] = useState("命令提示符");
+  const [wntitle, setWntitle] = useState("命令提示字元");
 
   const dispatch = useDispatch();
 
@@ -68,7 +68,7 @@ export const WnTerminal = () => {
       if (arg.length) {
         tmpStack.push(arg);
       } else {
-        tmpStack.push("ECHO 处于打开状态。");
+        tmpStack.push("ECHO 處於開啟狀態。");
       }
     } else if (type == "eval") {
       if (arg.length) {
@@ -109,11 +109,11 @@ export const WnTerminal = () => {
           }
         } else {
           errp = false;
-          tmpStack.push("目录名称无效。");
+          tmpStack.push("目錄名稱無效。");
         }
 
         if (errp) {
-          tmpStack.push("系统找不到指定的路径。");
+          tmpStack.push("系統找不到指定路徑。");
         }
       } else {
         tmpStack.push(pwd);
@@ -154,42 +154,42 @@ export const WnTerminal = () => {
         cmdcont.style.color = color;
       } else {
         tmpStack.push(
-          "设置默认的控制台前景和背景颜色。",
+          "設置默認的控制台前景和背景顏色。",
         );
         tmpStack.push("COLOR [arg]");
-        tmpStack.push("arg\t\t指定控制台输出的颜色属性。");
+        tmpStack.push("arg\t\t指定控制台輸出的顏色屬性。");
         tmpStack.push(
-          "颜色属性由两个十六进制数字指定 -- 第一个",
-          "对应于背景，第二个对应于前景。每个数字",
-          "可以为以下任何值:",
+          "顏色屬性由兩個十六進制數字指定 -- 第一个",
+          "對應於背景，第二個對應於前景。每個數字",
+          "可以為以下任何值:",
         );
         tmpStack.push("0\t\t黑色");
-        tmpStack.push("1\t\t蓝色");
-        tmpStack.push("2\t\t绿色");
-        tmpStack.push("3\t\t浅绿色");
-        tmpStack.push("4\t\t红色");
-        tmpStack.push("5\t\t洋红色");
+        tmpStack.push("1\t\t藍色");
+        tmpStack.push("2\t\t綠色");
+        tmpStack.push("3\t\t淺綠色");
+        tmpStack.push("4\t\t紅色");
+        tmpStack.push("5\t\t洋紅色");
         tmpStack.push("6\t\t灰色");
         tmpStack.push("7\t\t亮灰色");
         tmpStack.push("8\t\t灰色");
-        tmpStack.push("9\t\t淡蓝色");
-        tmpStack.push("A\t\t淡绿色");
-        tmpStack.push("B\t\t淡浅绿色");
-        tmpStack.push("C\t\t淡红色");
-        tmpStack.push("D\t\t浅洋红");
-        tmpStack.push("E\t\t淡黄色");
+        tmpStack.push("9\t\t淡藍色");
+        tmpStack.push("A\t\t淡綠色");
+        tmpStack.push("B\t\t淡淺綠色");
+        tmpStack.push("C\t\t淡紅色");
+        tmpStack.push("D\t\t淺洋紅");
+        tmpStack.push("E\t\t淡黃色");
         tmpStack.push("F\t\t亮白色");
         tmpStack.push(
-          "如果没有给定任何参数，此命令会将颜色还原到 CMD.EXE 启动时",
-          "的颜色。这个值来自当前控制台",
-          "窗口、/T 命令行开关或 DefaultColor 注册表",
+          "如果沒有給定任何參數，此命令會將顏色還原到 CMD.EXE 啟動时",
+          "的顏色。這個值來自當前控制台",
+          "窗口、/T 命令行開關或 DefaultColor 注冊表",
           "值。",
           "",
-          "如果尝试使用相同的",
-          "前景和背景颜色来执行",
-          "COLOR 命令，COLOR 命令会将 ERRORLEVEL 设置为 1。",
+          "如果嘗試使用相同的",
+          "前景和背景顏色來執行",
+          "COLOR 命令，COLOR 命令會將 ERRORLEVEL 設置為 1。",
           "",
-          '示例: /"COLOR fc" 在亮白色上产生淡红色',
+          '示例: /"COLOR fc" 在亮白色上產生淡紅色',
         );
       }
     } else if (type == "type") {
@@ -213,7 +213,7 @@ export const WnTerminal = () => {
       }
 
       if (errp) {
-        tmpStack.push("系统找不到指定的文件。");
+        tmpStack.push("系統找不到指定文件。");
       }
     } else if (type == "start") {
       dispatch({ type: "EDGELINK", payload: arg });
@@ -236,7 +236,7 @@ export const WnTerminal = () => {
       tmpStack = ["Microsoft Windows [版本 10.0.22000.51]", ""];
       dispatch({ type: wnapp.action, payload: "close" });
     } else if (type == "title") {
-      setWntitle(arg.length ? arg : "命令提示符");
+      setWntitle(arg.length ? arg : "命令提示字元");
     } else if (type == "hostname") {
       tmpStack.push("blue");
     } else if (type == "login") {
@@ -255,14 +255,14 @@ export const WnTerminal = () => {
       tmpStack.push("Microsoft Windows [版本 10.0.22000.51]");
     } else if (type == "systeminfo") {
       var dvInfo = [
-        "主机名:               BLUE",
-        "OS 名称:              Microsoft Windows 11 专业版",
-        "OS 版本:              10.0.22621 暂缺 Build 22621",
-        "OS 制造商:            Microsoft Corporation",
-        "OS 配置:              独立工作站",
-        "OS 构建类型:           Multiprocessor Free",
-        "注册的所有人:          Blue",
-        "注册的组织:            暂缺",
+        "主機名稱:             ArcLight",
+        "OS 名稱:              Microsoft Windows 11 專業版",
+        "OS 版本:              10.0.22621 暫缺 Build 22621",
+        "OS 製造商:            Microsoft Corporation",
+        "OS 配置:              獨立工作站",
+        "OS 構建類型:          Multiprocessor Free",
+        "註冊人:               ArcLight",
+        "註冊組織:             暫缺",
         "产品 ID:              7H1S1-5AP1R-473DV-3R5I0N",
       ];
 
@@ -271,25 +271,25 @@ export const WnTerminal = () => {
       }
     } else if (type == "help") {
       var helpArr = [
-        "有关某个命令的详细信息，请键入 HELP 命令名",
-        "CD             显示当前目录的名称或将其更改。",
+        "有關某個命令的詳細信息，請鍵入 HELP 命令名",
+        "CD             顯示當前目錄的名稱或將其更改。",
         "CLS            清除屏幕。",
-        "COLOR		  设置默认控制台前景和背景颜色。",
-        "DATE           显示或设置日期。",
-        "DIR            显示一个目录中的文件和子目录。",
-        "ECHO           显示消息，或将命令回显打开或关闭。",
-        "EXIT           退出 CMD.EXE 程序(命令解释程序)。",
-        "HELP           提供 Windows 命令的帮助信息。",
-        "START          启动单独的窗口以运行指定的程序或命令。",
-        "SYSTEMINFO     显示计算机的特定属性和配置。",
-        "TIME           显示或设置系统时间。",
-        "TITLE          设置 CMD.EXE 会话的窗口标题。",
-        "TYPE           显示文本文件的内容。",
-        "VER            显示 Windows 的版本。",
-        "PYTHON         执行 PYTHON 编程。",
-        "EVAL           运行 JavaScript 语句",
+        "COLOR		設置默認控制台前景和背景顏色。",
+        "DATE           顯示或設置日期。",
+        "DIR            顯示一個目錄中的文件和子目錄。",
+        "ECHO           顯示消息，或將命令回顯打開或關闭。",
+        "EXIT           退出 CMD.EXE 程序(命令解釋程序)。",
+        "HELP           提供 Windows 命令的幫助信息。",
+        "START          啟動單獨的窗口以運行指定的程序或命令。",
+        "SYSTEMINFO     顯示計算機的特定屬性和配置。",
+        "TIME           顯示或設置系統時間。",
+        "TITLE          設置 CMD.EXE 會話的窗口標題。",
+        "TYPE           顯示文本文件的內容。",
+        "VER            顯示 Windows 的版本。",
+        "PYTHON         執行 PYTHON 編程。",
+        "EVAL           運行 JavaScript 語句。",
         "",
-        "有关工具的详细信息，请参阅联机帮助中的命令行参考。",
+        "有關工具的詳細信息，請參閱聯機幫助中的命令行參考。",
       ];
 
       for (var i = 0; i < helpArr.length; i++) {
@@ -298,20 +298,20 @@ export const WnTerminal = () => {
     } else if (type == "") {
     } else if (type == "ipconfig") {
       const IP = IpDetails[0];
-      tmpStack.push("Windows IP 配置");
+      tmpStack.push("Windows IP 設定");
       tmpStack.push("");
       tmpStack.push("IPv6: " + IP.ip);
-      tmpStack.push("网络: " + IP.network);
+      tmpStack.push("網路: " + IP.network);
       tmpStack.push("城市: " + IP.city);
       tmpStack.push("ISP: " + IP.org);
-      tmpStack.push("区域: " + IP.region);
+      tmpStack.push("區域: " + IP.region);
     } else {
       tmpStack.push(
-        `'${type}' 不是内部或外部命令，也不是可运行的程序`,
+        `'${type}' 不是内部或外部命令，也不是可執行的程序`,
       );
-      tmpStack.push("或批处理文件。");
+      tmpStack.push("或批次處理文件。");
       tmpStack.push("");
-      tmpStack.push('输入 "help" 以获取可用命令');
+      tmpStack.push('輸入 "help" 以獲取可用命令');
     }
 
     if (type.length > 0) tmpStack.push("");
