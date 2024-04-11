@@ -117,7 +117,7 @@ export const EdgeMenu = () => {
         <div className="overTool flex">
           <Icon src={wnapp.icon} width={14} margin="0 6px" />
           <div className="btab">
-            <div>新建标签页</div>
+            <div>新索引標籤</div>
             <Icon
               fafa="faTimes"
               click={wnapp.action}
@@ -167,7 +167,7 @@ export const EdgeMenu = () => {
                 onChange={typing}
                 data-payload={3}
                 value={url}
-                placeholder="搜索或输入 Web 地址"
+                placeholder="搜尋或輸入網址"
                 type="text"
               />
               <Icon
@@ -231,9 +231,9 @@ export const EdgeMenu = () => {
                 x
               </div>
               <div className="text-gray-800 text-xs font-medium">
-                如果它显示 <b>“拒绝连接”</b>，或者{" "}
-                <b>那个网站不允许 </b>
-                其他网站显示他们的内容。 <b>我无法修复它</b>.
+                如果它顯示 <b>“拒絕連接”</b>，或者{" "}
+                <b>那個網站不允許 </b>
+                其他網站顯示它的內容。 <b>我無法修復它</b>.
               </div>
             </div>
           </div>
