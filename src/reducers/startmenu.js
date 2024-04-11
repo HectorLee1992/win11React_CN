@@ -10,10 +10,10 @@ const defState = {
   pwctrl: false,
   curAlpha: "A",
   qksrch: [
-    ["faClock", 1, "历史上的今天"], 
+    ["faClock", 1, "歷史上的今天"], 
     ["faChartLine", null, "今日行情"],
-    ["faFilm", null, "近期电影"],
-    ["faNewspaper", 1, "头条新闻"],
+    ["faFilm", null, "近期電影"],
+    ["faNewspaper", 1, "頭條新聞"],
   ],
 };
 
