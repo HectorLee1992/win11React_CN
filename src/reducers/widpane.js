@@ -54,11 +54,11 @@ const getRandom = (x = 10, rm = 0) => {
 const defState = {
   data: {
     weather: {
-      city: "New Delhi",
-      country: "India",
+      city: "Taipei",
+      country: "Republic of China",
       wstate: wstates[getRandom(10, 1)],
       icon: abbr[getRandom()],
-      temp: 30 + getRandom(20),
+      temp: 30 + getRandom(10),
       rain: 10 + getRandom(80),
       wind: 4 + getRandom(5),
       days: [0, 1, 2, 3].map((i) => {
